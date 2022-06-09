@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: black;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  color: #f5f4f4;
+}
+
+.wrapper {
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+
+.wrapper.active {
+  overflow: hidden;
+  opacity: 1;
+}
+
+.wrapper.active .parallax__wave {
+  opacity: 1;
+  -webkit-transition: all 1s ease 1s;
+  transition: all 1s ease 1s;
+}
+
+.wrapper.active .parallax__rope {
+  opacity: 1;
+  -webkit-transition: all 1s ease 1.8s;
+  transition: all 1s ease 1.8s;
+}
+
+.wrapper.active .parallax__lighthouse {
+  bottom: 130px;
+  -webkit-transition: all 0.8s ease 2.5s;
+  transition: all 0.8s ease 2.5s;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 360px;
+}
+
+.parallax {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(70%, black));
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, black 70%);
+}
+
+.parallax__list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.parallax__list li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  list-style: none;
+}
+
+.parallax__bg {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  background: url("../img/background.jpg") 50% 100%/cover no-repeat;
+}
+
+.parallax__rope {
+  position: absolute;
+  width: 120%;
+  left: -10%;
+  opacity: 0;
+}
+
+.parallax__rope-1 .parallax__element {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+.parallax__rope-2 .parallax__element {
+  -webkit-transform: scale(0.75556);
+          transform: scale(0.75556);
+}
+
+.parallax__rope-3 .parallax__element {
+  -webkit-transform: scale(0.98889);
+          transform: scale(0.98889);
+}
+
+.parallax__rope img {
+  width: 100%;
+}
+
+.parallax__rope-1 {
+  top: 5%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.parallax__element {
+  position: absolute;
+}
+
+.parallax__element span {
+  display: inline-block;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  width: 280px;
+  height: 280px;
+  margin: 0px 0px 0px -140px;
+  -webkit-animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.parallax__elemen-1 {
+  top: 28%;
+  left: 20%;
+}
+
+.parallax__elemen-1 span {
+  background: url("../img/clouds/board-cloud-2.png") 0 0/100% no-repeat;
+}
+
+.parallax__elemen-2 {
+  top: 46%;
+  left: 40%;
+}
+
+.parallax__elemen-2 span {
+  background: url("../img/clouds/board-cloud-1.png") 0 0/100% no-repeat;
+}
+
+.parallax__elemen-3 {
+  top: 24%;
+  left: 80%;
+}
+
+.parallax__elemen-3 span {
+  background: url("../img/clouds/board-birds.png") 0 0/100% no-repeat;
+}
+
+.parallax__rope-2 {
+  top: -1.66667%;
+  -webkit-transform: scale(1.05556);
+          transform: scale(1.05556);
+}
+
+.parallax__elemen-4 {
+  top: 17%;
+  left: 10%;
+}
+
+.parallax__elemen-4 span {
+  background: url("../img/clouds/board-cloud-1.png") 0 0/100% no-repeat;
+}
+
+.parallax__elemen-5 {
+  top: 56%;
+  left: 50%;
+}
+
+.parallax__elemen-5 span {
+  background: url("../img/clouds/board-cloud-4.png") 0 0/100% no-repeat;
+}
+
+.parallax__rope-3 {
+  top: -11.66667%;
+  -webkit-transform: scale(1.13889);
+          transform: scale(1.13889);
+}
+
+.parallax__elemen-6 {
+  top: 57%;
+  left: 30%;
+}
+
+.parallax__elemen-6 span {
+  background: url("../img/clouds/board-birds.png") 0 0/100% no-repeat;
+}
+
+.parallax__elemen-7 {
+  top: 65%;
+  left: 60%;
+}
+
+.parallax__elemen-7 span {
+  background: url("../img/clouds/board-cloud-2.png") 0 0/100% no-repeat;
+}
+
+.parallax__elemen-8 {
+  top: 45%;
+  left: 80%;
+}
+
+.parallax__elemen-7 span {
+  background: url("../img/clouds/board-cloud-3.png") 0 0/100% no-repeat;
+}
+
+.parallax__wave {
+  position: absolute;
+  background: url("../img/waves/wave-plain.png") 0 0/auto 101% repeat-x;
+  left: -100%;
+  width: 300%;
+  opacity: 0;
+}
+
+.parallax__wave-1 {
+  bottom: 180px;
+  height: 86px;
+  -webkit-animation: wave 7.11111s 0.1s infinite linear;
+          animation: wave 7.11111s 0.1s infinite linear;
+  background: url("../img/waves/wave-paint.png") 0 0/auto 101% repeat-x;
+}
+
+.parallax__wave-2 {
+  bottom: 144px;
+  height: 115px;
+  -webkit-animation: wave 6.66667s 0.1s infinite linear;
+          animation: wave 6.66667s 0.1s infinite linear;
+}
+
+.parallax__wave-3 {
+  bottom: 108px;
+  height: 144px;
+  -webkit-animation: wave 6.22222s 0.1s infinite linear;
+          animation: wave 6.22222s 0.1s infinite linear;
+  background: url("../img/waves/wave-paint.png") 0 0/auto 101% repeat-x;
+}
+
+.parallax__lighthouse {
+  width: 320px;
+  height: 560px;
+  position: absolute;
+  right: 12%;
+  bottom: -100%;
+  background: url("../img/lighthouse.png") 0 0 no-repeat;
+  -webkit-animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.parallax__wave-4 {
+  bottom: 72px;
+  height: 173px;
+  -webkit-animation: wave 5.77778s 0.1s infinite linear;
+          animation: wave 5.77778s 0.1s infinite linear;
+}
+
+.parallax__wave-5 {
+  bottom: -1px;
+  height: 230px;
+  -webkit-animation: wave 4.88888s 0.1s infinite linear;
+          animation: wave 4.88888s 0.1s infinite linear;
+}
+
+.parallax__wave-6 {
+  bottom: -72px;
+  height: 288px;
+  -webkit-animation: wave 4.5s 0.1s infinite linear;
+          animation: wave 4.5s 0.1s infinite linear;
+  background: url("../img/waves/wave-paint.png") 0 0/auto 101% repeat-x;
+}
+
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+  }
+}
+
+@keyframes swing {
+  0% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+  }
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+            transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+            transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+            transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+            transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+  }
+}
+
+@-webkit-keyframes lighthouse {
+  0% {
+    -webkit-transform: translate3d(10%, 0, 0) rotateZ(10deg);
+            transform: translate3d(10%, 0, 0) rotateZ(10deg);
+  }
+  100% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+            transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+  }
+}
+
+@keyframes lighthouse {
+  0% {
+    -webkit-transform: translate3d(10%, 0, 0) rotateZ(10deg);
+            transform: translate3d(10%, 0, 0) rotateZ(10deg);
+  }
+  100% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+            transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+  }
+}
